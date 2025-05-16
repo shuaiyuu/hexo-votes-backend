@@ -8,6 +8,14 @@ const repo  = "shuaiyuu.github.io";     // repo that has GitHub Pages
 const ISSUE = 2;                         // number of __VOTES__ issue
 
 export default async function handler(req, res) {
+
+  
+  /* ── CORS ─────────────────────────────────────────── */
+  res.setHeader("Access-Control-Allow-Origin", "*");        // allow all sites
+  res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  if (req.method === "OPTIONS") return res.status(200).end(); // pre-flight
+  
   try {
     const { key, delta } =
       req.method === "GET" ? { key: req.query.key } : req.body;
