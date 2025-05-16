@@ -5,7 +5,7 @@ const octokit = new Octokit({ auth: process.env.GH_TOKEN });
 // ⬇️ EDIT these three
 const owner = "shuaiyuu";          // GitHub login
 const repo  = "shuaiyuu.github.io";     // repo that has GitHub Pages
-const ISSUE = 3;                         // number of __VOTES__ issue
+const ISSUE = 2;                         // number of __VOTES__ issue
 
 export default async function handler(req, res) {
   try {
